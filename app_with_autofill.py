@@ -30,7 +30,7 @@ user_inputs = {}
 for i, feature in enumerate(features):
     user_inputs[feature] = st.sidebar.number_input(
         label=feature,
-        value=autofill_presets[station_type][i],
+        value=float(autofill_presets[station_type][i]),
         step=1.0
     )
 
@@ -65,3 +65,4 @@ if uploaded_file:
             st.dataframe(df_uploaded)
     except Exception as e:
         st.error(f"Error processing uploaded file: {e}")
+Fix: Cast autofill default value to float
