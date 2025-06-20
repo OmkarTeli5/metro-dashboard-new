@@ -65,4 +65,4 @@ if uploaded_file:
             st.dataframe(df_uploaded)
     except Exception as e:
         st.error(f"Error processing uploaded file: {e}")
-Fix: Cast autofill default value to float
+
